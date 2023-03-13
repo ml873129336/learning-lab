@@ -22,7 +22,7 @@ def topic(request,topic_id):
     topic = Topic.objects.get(id=topic_id)
     if topic.owner != request.user:
         raise  Http404
-    entries = topic.entry_set.order_by('-data_added')
+    entries = topic.entry_set.order_by('data_added')
     context = {'topic':topic,"entries":entries}
     return render(request,'learning_logs/topic.html',context)
 

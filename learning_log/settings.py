@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #第三方程序
+    'bootstrap3',
+
     #我的程序
     'learning_logs',
     'users',
@@ -131,3 +134,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # 我的设置
 LOGIN_URL = '/login'
+
+# django-bootstrap3的设置
+BOOTSTRAP3 = {
+    'include_jqery': True,
+}
